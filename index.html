@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>PLT GENERATOR</title>
+        <meta charset="utf-8">
+        <link href="https://fonts.googleapis.com/css?family=Baloo+Da+2&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="style.css" />
+    </head>
+    <body>
+       
+        <div class="tableur">
+
+            <h2> PLT GENERATOR </h3>
+            <div class="table">
+            <table id="theTable">
+                <thead id="tableHead">
+                    <tr id="titleLine"></tr>
+                    <tr id="titleEdit"></tr>
+                    <tr id="colDel"></tr>
+                </thead>
+                <tbody id="tableBody">
+                    <tr id="line_0"></tr>
+                    <tr id="line_1"></tr>
+                    <tr id="line_2"></tr>
+                </tbody>
+                <tfoot>
+                    <td><button class="foot_btn" id="btn_add_line" onclick="table.addLine()">(+) NOUVELLE LIGNE</button></td>
+                    <td><button class="foot_btn" id="btn_add_column" onclick="table.addCol()">(+) NOUVELLE COLONNE</button></td>
+                </tfoot>
+
+            </table>
+        </div>
+
+            <h3> Grandeurs Calculées </h3>
+
+            <table>
+                <tbody>
+                    <tr>
+                        <td>Nom</td>
+                        <td>Code</td>
+                        <td>Expression (utiliser a pour désigner A)</td>
+                    </tr>
+
+                    <tr>
+                        <td> <input type="text" id="F_0_title"> </td>
+                        <td> <input type="text" id="F_0_expression"> </td>
+
+                    </tr>
+
+
+                </tbody>
+                
+            </table>
+            <input type="button" value="+" id="btnNewCal">
+            <div class="params">
+            <h3> Paramètres </h3>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>Titre</td>
+                        <td><input type="text" id="title"></td>
+                        <td>Taille de police: </td>
+                        <td><input type="text" id="title_fontsize" value="15"></td>
+                    </tr>
+                    <tr>
+                        <td>Abscisse :</td>
+                        <td><select name="X" id="X">
+                            <option value="A"></option>
+
+                        </select></td>
+                    </tr>
+
+                    <tr>
+                        <td>Ordonnée :</td>
+                        <td><select name="Y" id="Y">
+
+
+
+                            </select>
+
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td> Activer la grille :</td>
+                        <td><input type="checkbox" id="gridEnabled"></td>
+                    </tr>
+                    <tr>
+                        <td> Relier les points :</td>
+                        <td><input type="checkbox" id="linesEnable" checked></td>
+                    </tr> 
+                    <tr>
+                        <td> Points visibles :</td>
+                        <td><input type="checkbox" id="pointsEnable" checked></td>
+                    </tr>
+                </tbody>
+            </table>
+            </div>
+        <br>
+        <h3>Code Python</h3>
+        <input type="button" value="GENERER" id="btnGenerate" onclick="generatePython()">
+        <div id="output">
+
+        </div>
+    <script src="js/column.js" defer></script>
+    <script src="js/table.js" defer></script>
+    <script src="js/script.js" defer></script>
+    </body>
+</html>
+
+
