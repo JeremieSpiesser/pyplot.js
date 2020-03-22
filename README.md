@@ -1,4 +1,3 @@
-#Pyplot.js
-#Pyplot.js
+# Pyplot.js
 
 Simple WYSIWYG tool for the matplotlib.pyplot python library.
