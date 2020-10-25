@@ -46,7 +46,6 @@ class Column {
     }
     //inserts a "" after the index-th term
     insertAfter(index){
-        console.log(index);
         if (-1 < index && index < this.content.length){
             console.log(`insertion for table {this.name}`);
             this.content.splice(index+1,0,"");
