@@ -16,7 +16,7 @@ let table = {
         this.columns.forEach(  (col) => col.populate(this.maxSize)  );
         for (let i=0; i<this.maxSize; i++){
             document.getElementById(`line_${i}`).innerHTML += `<td><button type="button" onclick="table.delLine(${i})">-</button></td>`;
-            document.getElementById(`line_${i}`).innerHTML += `<td><button type="button" onclick="table.insertAfter(${i+1})">+</button></td>`;
+            document.getElementById(`line_${i}`).innerHTML += `<td><button type="button" onclick="table.insertAfter(${i})">+</button></td>`;
         }
         this.updateChoice();
     },
