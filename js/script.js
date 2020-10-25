@@ -35,7 +35,14 @@ let chosenY = document.getElementById("Y")
 
 document.getElementById("btnGenerate").onclick = () => {
     let line = ""
-    table.columns.forEach( (col) =>  {line += col.id + "=np.array(" +JSON.stringify(col.content.map( (x) => parseFloat(x.replace(',','.')))) + ")\n" })
+    table.columns.forEach( (col) =>  {
+        line += col.id + "=np.array(" + JSON.stringify(col.content.map(function(x){
+            let newVal = parseFloat(x.replace(',','.'));
+            if (isNaN(newVal)){
+                return "np.NaN"
+            }else{
+                return newVal
+            }})).replaceAll('\"','') + ")\n" });
     texte = `
     <pre>
     <code>
@@ -62,7 +69,7 @@ plt.show()
 
 
 
-    document.getElementById("output").innerHTML = texte
+    document.getElementById("output").innerHTML = texte;
 }
 
 
