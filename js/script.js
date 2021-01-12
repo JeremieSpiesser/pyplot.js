@@ -10,23 +10,23 @@ class calculatedCols {
 
 
 numberG = 0
-class graphs {
-    constructor(){
-        this.abs = "A"
-        this.ord = "A"
-        this.line = true
-        this.scatter = true
-        this.id = ++numberG
-    }
-    update = function(abs,ord){
-        this.abs = abs
-        this.ord = ord
-    }
-    generateHTML = function(){
+// class graphs {
+//     constructor(){
+//         this.abs = "A"
+//         this.ord = "A"
+//         this.line = true
+//         this.scatter = true
+//         this.id = ++numberG
+//     }
+//     update = function(abs,ord){
+//         this.abs = abs
+//         this.ord = ord
+//     }
+//     generateHTML = function(){
         
-    }
+//     }
 
-}
+// }
 
 
 let gridEnabled = document.getElementById("gridEnabled")
