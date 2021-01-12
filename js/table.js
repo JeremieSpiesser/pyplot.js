@@ -7,6 +7,7 @@ let table = {
     populate: function () {
         document.getElementById("titleLine").innerHTML = "";
         document.getElementById("titleEdit").innerHTML = "";
+        document.getElementById("unitEdit").innerHTML = "";
         document.getElementById("colDel").innerHTML = "";
         document.getElementById("tableBody").innerHTML = "";
         for (let i=0; i<this.maxSize; i++){
@@ -19,6 +20,7 @@ let table = {
             document.getElementById(`line_${i}`).innerHTML += `<td><button type="button" onclick="table.insertAfter(${i})">+</button></td>`;
         }
         this.updateChoice();
+        this.updateUnits();
     },
     findById: function(id){
         for (let i = 0; i < this.columns.length; i++) {
@@ -31,6 +33,9 @@ let table = {
     //col.updateTitles foreach col
     updateTitles: function(){
         this.columns.forEach( (col) => col.updateTitle());
+    },
+    updateUnits: function(){
+        this.columns.forEach( (col) => col.updateUnit());
     },
     appendCol: function(col){
         this.columns.push(col);
